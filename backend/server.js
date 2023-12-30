@@ -37,7 +37,7 @@ app.use(errorHandler);
 
 //CONNECT TO MONGO DB
 const PORT=process.env.PORT || 5000;
-mongoose.connect(`mongodb+srv://rakshita:01234@cluster0.rgcfppb.mongodb.net/hunt-ez?retryWrites=true&w=majority`).then(()=>{
+mongoose.connect(process.env.MONGO_URI).then(()=>{
     app.listen(PORT,()=>{
         console.log(`Server running on port ${PORT}`)
     })

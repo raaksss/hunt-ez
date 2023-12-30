@@ -1,6 +1,5 @@
 const asyncHandler=require("express-async-handler");
 const User = require("../models/userModel");
-User
 const jwt=require("jsonwebtoken")
 const bcrypt=require("bcryptjs");
 const Token=require("../models/tokenModel");
@@ -9,13 +8,9 @@ const sendEmail = require("../utils/sendEmail");
 
 const generateToken=(id) => { 
 return jwt.sign({id},process.env.JWT_SECRET,{expiresIn:"1d"})
-
-
 };
 const registerUser=asyncHandler (async(req,res) => {
 const {name,email,password,institnname} = req.body
-
-
 
 //Validation
 if(!name || !email || !password || !institnname){
