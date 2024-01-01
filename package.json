@@ -1,10 +1,12 @@
 {
   "scripts": {
     "backend": "nodemon backend/server.js",
-    "frontend":"npm start --prefix frontend",
-    "both":"concurrently \"npm run backend\" \"npm run frontend\""
+    "frontend": "npm start --prefix frontend",
+    "both": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "dependencies": {
-    "concurrently": "^8.2.0"
+    "@reduxjs/toolkit": "^2.0.1",
+    "concurrently": "^8.2.0",
+    "react-redux": "^9.0.4"
   }
 }
